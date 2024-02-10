@@ -1,12 +1,9 @@
-import argparse
-from dataclasses import dataclass
 from langchain.vectorstores.chroma import Chroma
-from langchain.embeddings import SentenceTransformerEmbeddings
+from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain.prompts import ChatPromptTemplate
+from langchain_community.llms import CTransformers
+import argparse
 import os
-from langchain.llms import CTransformers
-#from langchain.chains import RetrievalQA
-import gradio as gr
 
 local_llm = "zephyr-7b-beta.Q5_K_M.gguf"
 CHROMA_PATH = "chroma"
@@ -33,7 +30,9 @@ def main():
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2"))
 
     # Searching database
-    results = db.similarity_search_with_relevance_scores(query_text, k=2)
+    results = db.similarity_search_with_relevance_scores(query_text, k=3)
+    print(results[0][1])
+    print(results)
     #if len(results) == 0 or results[0][1] < 0.7:
     #    print(f"Unable to find matching results.")
     #    return
