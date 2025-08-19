@@ -1,0 +1,26 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# SQLite database
+*.sqlite3
+chroma/
+
+# Model files
+*.gguf
+
+# Node modules and frontend build artifacts
+frontend/node_modules/
+frontend/package-lock.json
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Python virtual environments
+venv/
+.env/
+
+# Ignore Docker ignore if present
+.dockerignore

@@ -1,9 +1,11 @@
-from langchain.vectorstores.chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain.prompts import ChatPromptTemplate
 from langchain_community.llms import CTransformers
 import argparse
 import os
+
+######### standalone script #########
 
 local_llm = "zephyr-7b-beta.Q5_K_M.gguf"
 CHROMA_PATH = "chroma"

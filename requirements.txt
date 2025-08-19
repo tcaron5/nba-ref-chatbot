@@ -1,0 +1,12 @@
+flask
+flask-cors
+langchain
+langchain-chroma
+langchain-huggingface
+chromadb
+ctransformers
+tqdm
+numpy
+langchain-community
+sentence-transformers
+unstructured[md]

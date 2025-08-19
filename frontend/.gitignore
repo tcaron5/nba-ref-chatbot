@@ -1,0 +1,3 @@
+# Simple ignore for node_modules and build output
+node_modules/
+dist/
